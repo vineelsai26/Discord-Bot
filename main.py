@@ -2,6 +2,8 @@ import discord
 import os
 import random
 from dotenv import load_dotenv
+from threading import Thread
+from server import run
 
 load_dotenv()
 
@@ -38,5 +40,9 @@ class EDITH(discord.Client):
 
 
 client = EDITH()
+
+
+thread = Thread(target=run)
+thread.start()
 
 client.run(TOKEN)
