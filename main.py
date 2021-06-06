@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv
 from threading import Thread
 from server import run
-from message import message as msg
+from features.message import message as msg
 
 load_dotenv()
 

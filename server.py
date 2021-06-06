@@ -4,7 +4,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-PORT = os.getenv('PORT') or 5000
 app = Flask(__name__)
 
 
@@ -14,4 +13,4 @@ def hello_world():
 
 
 def run():
-    app.run(port=PORT)
+    app.run()
