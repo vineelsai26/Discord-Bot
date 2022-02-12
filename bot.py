@@ -1,8 +1,6 @@
 import discord
 import os
 from dotenv import load_dotenv
-from server import run
-from threading import Thread
 from features.message import message as msg
 
 load_dotenv()
@@ -24,8 +22,5 @@ async def on_message(message):
     else:
         await msg(message)
 
-
-thread = Thread(target=run)
-thread.start()
 
 client.run(TOKEN)
