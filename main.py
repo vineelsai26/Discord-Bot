@@ -10,7 +10,7 @@ load_dotenv()
 TOKEN = os.getenv('TOKEN')
 
 
-class EDITH(discord.Client):
+class Bot(discord.Client):
     async def on_ready(self):
         print("connected")
 
@@ -21,7 +21,7 @@ class EDITH(discord.Client):
             await msg(message)
 
 
-client = EDITH()
+client = Bot()
 
 
 thread = Thread(target=run)

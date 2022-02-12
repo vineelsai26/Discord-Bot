@@ -1,3 +1,3 @@
 # Discord-Bot
 
-discord bot hosted on heroku
+Discord bot written in Python with discord.py.
