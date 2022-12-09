@@ -7,7 +7,11 @@ load_dotenv()
 
 TOKEN = os.getenv('TOKEN')
 
-client = discord.Client()
+intents = discord.Intents.default()
+intents.members = True
+intents.message_content = True
+
+client = discord.Client(intents=intents)
 
 
 @client.event
@@ -17,9 +21,7 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if message.author == client.user:
-        return
-    else:
+    if message.author != client.user:
         await msg(message)
 
 
