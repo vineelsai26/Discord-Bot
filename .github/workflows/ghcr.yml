@@ -1,4 +1,4 @@
-name: Publish RCE image to GHCR
+name: Publish Discord Bot image to GHCR
 
 on:
   release:

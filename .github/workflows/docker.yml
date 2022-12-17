@@ -1,4 +1,4 @@
-name: Publish RCE Image to Docker Hub
+name: Publish Discord Bot Image to Docker Hub
 
 on:
   release:
