@@ -1,9 +1,8 @@
 name: Publish Discord Bot Image to Docker Hub
 
 on:
-  release:
-    types:
-      - published
+  push:
+    branches: [ main ]
 
 jobs:
   build:
