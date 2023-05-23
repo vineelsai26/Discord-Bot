@@ -1,10 +1,9 @@
-FROM python:3-slim
+FROM vineelsai/python
 
 WORKDIR /usr/src/app
 
-COPY requirements.txt ./
-RUN pip install -r requirements.txt
-
 COPY . .
+
+RUN pip install -r requirements.txt
 
 CMD [ "python", "bot.py" ]
